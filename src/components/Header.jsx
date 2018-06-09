@@ -1,24 +1,16 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
-
-const propTypes = {
-    
-};
+import '../styles/header.scss';
 
 
 class Header extends Component {
     render() {
         return (
-            <div>
+            <header className="header">
                 React Issues
-            </div>
+            </header>
         );
     }
 }
-
-
-Header.propTypes = propTypes;
-
 
 export default Header;

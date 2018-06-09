@@ -3,8 +3,10 @@ import axios from 'axios';
 
 import Header from './Header';
 import IssuesList from './IssuesList';
+import Loader from './Loader';
 
 import '../styles/app.scss';
+
 
 class App extends Component {
     constructor() {
@@ -36,7 +38,11 @@ class App extends Component {
         return (
             <div>
                 <Header />
-                <IssuesList issues={this.state.issues} />
+                {this.state.issues.length ? 
+                    <IssuesList issues={this.state.issues} />
+                    :
+                    <Loader />
+                }
             </div>
         );
     }

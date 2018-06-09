@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import IssueItem from './IssueItem';
 
+import '../styles/issues-list.scss';
+
 const propTypes = {
     issues: PropTypes.array.isRequired
 };

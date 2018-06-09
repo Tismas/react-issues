@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import Avatar from './Avatar';
+
+import '../styles/issue-item.scss';
 
 const propTypes = {
     issue: PropTypes.object.isRequired
@@ -9,9 +12,11 @@ const propTypes = {
 
 class IssueItem extends Component {
     render() {
+        const { issue } = this.props;
         return (
-            <div>
-                {this.props.issue.title}
+            <div className="issue-container">
+                <Avatar src={issue.user.avatar_url} />
+                {issue.title}
             </div>
         );
     }
