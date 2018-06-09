@@ -5,7 +5,7 @@ import Avatar from './Avatar';
 import MoreArrow from './MoreArrow';
 import IssueBody from './IssueBody';
 
-import '../styles/issue-item.scss';
+import '../styles/issue-card.scss';
 
 const propTypes = {
     issue: PropTypes.object.isRequired,
@@ -16,6 +16,15 @@ const propTypes = {
 
 
 class IssueCard extends Component {
+    constructor() {
+        super();
+        
+        this.colors = {
+            'open': 'green',
+            'closed': 'red'
+        };
+    }
+
     render() {
         const { issue, isOpen, open, close } = this.props;
         return (
@@ -24,8 +33,16 @@ class IssueCard extends Component {
                     src={issue.user.avatar_url} 
                 />
 
-                <div className="issue-title"> {issue.title}</div>
-                
+                <div className="issue-info">
+                    <div className="issue-status">
+                        <div 
+                            className="status-circle"
+                            style={{'background': this.colors[issue.state]}}
+                        /> 
+                        { issue.state } 
+                    </div>
+                    <div className="issue-title"> { issue.title }</div>
+                </div>
                 <MoreArrow 
                     isOpen={isOpen}
                     show={open}
