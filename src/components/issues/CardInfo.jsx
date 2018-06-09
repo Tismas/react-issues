@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Octicon from 'react-octicon';
 
-import '../../styles/issue-card-info.scss';
+import '../../styles/issues/issue-card-info.scss';
 
 const propTypes = {
     issue: PropTypes.object.isRequired,

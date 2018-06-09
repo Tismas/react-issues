@@ -5,7 +5,7 @@ import Avatar from '../common/Avatar';
 import MoreArrow from '../common/MoreArrow';
 import CardInfo from './CardInfo';
 
-import '../../styles/issue-card.scss';
+import '../../styles/issues/issue-card.scss';
 
 const propTypes = {
     issue: PropTypes.object.isRequired,

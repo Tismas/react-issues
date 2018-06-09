@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 
-import '../../styles/issue-body.scss';
+import '../../styles/issues/issue-body.scss';
 
 const propTypes = {
     body: PropTypes.string.isRequired

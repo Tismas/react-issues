@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import IssueBody from './IssueBody';
 import IssueCard from './IssueCard';
 
-import '../../styles/issue-item.scss';
+import '../../styles/issues/issue-item.scss';
 
 const propTypes = {
     issue: PropTypes.object.isRequired

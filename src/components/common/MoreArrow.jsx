@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import '../../styles/more-arrow.scss';
+import '../../styles/common/more-arrow.scss';
 
 const propTypes = {
     show: PropTypes.func.isRequired,

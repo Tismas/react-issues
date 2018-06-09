@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import '../../styles/avatar.scss';
+import '../../styles/common/avatar.scss';
 
 const propTypes = {
     src: PropTypes.string.isRequired
