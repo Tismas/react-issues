@@ -1,14 +1,17 @@
 @keyframes slide-animation {
-    from { height: 0; };
-    to { height: 100%; };
+    from { max-height: 0; padding: 0 40px; };
+    to { max-height: 500px; overflow: auto; padding: 20px 40px; };
 }
 
 .issue-body-container {
-    width: 100%;
-    padding: 10px 40px;
+    width: 94%;
+    
+    max-height: 0;
+    padding: 0 40px;
+    overflow: hidden;
 
     animation: slide-animation;
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
 }
