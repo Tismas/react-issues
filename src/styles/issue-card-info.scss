@@ -1,0 +1,21 @@
+.issue-info {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+}
+
+.issue-title {
+    font-weight: bold;
+}
+
+.issue-status {
+    display: flex;
+    align-items: center;
+    height: 25px;
+}
+
+.status-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin-right: 5px;
+}
