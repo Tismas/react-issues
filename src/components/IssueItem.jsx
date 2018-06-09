@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Avatar from './Avatar';
 import MoreArrow from './MoreArrow';
 import IssueBody from './IssueBody';
+import IssueCard from './IssueCard';
 
 import '../styles/issue-item.scss';
 
@@ -33,22 +34,16 @@ class IssueItem extends Component {
 
     render() {
         const { issue } = this.props;
+        const { isOpen } = this.state;
         return (
             <div className="issue-container">
-                <div className="issue-entry-container">
-                    <Avatar 
-                        src={issue.user.avatar_url} 
-                    />
-
-                    <div className="issue-title"> {issue.title}</div>
-                    
-                    <MoreArrow 
-                        isOpen={this.state.isOpen}
-                        show={this.open}
-                        hide={this.close} 
-                    />
-                </div>
-                {this.state.isOpen ? <IssueBody body={issue.body} /> : null}
+                <IssueCard 
+                    isOpen={isOpen}
+                    issue={issue}
+                    open={this.open}
+                    close={this.close}
+                />
+                {isOpen ? <IssueBody body={issue.body} /> : null}
             </div>
         );
     }
