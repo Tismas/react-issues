@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import IssueItem from './IssueItem';
 
-import '../styles/issues-list.scss';
+import '../../styles/issues-list.scss';
 
 const propTypes = {
     issues: PropTypes.array.isRequired,
@@ -18,19 +18,19 @@ class IssuesList extends Component {
         this.loadMore = this.loadMore.bind(this);
     }
 
-    loadMore(e) {
-        if(this.props.fetching) return;
-
-        if(document.body.scrollHeight - window.scrollY - window.innerHeight < 400)
-            this.props.loadMore();
-    }
-
     componentDidMount() {
         window.addEventListener('scroll', this.loadMore);
     }
 
     componentWillUnmount() {
         window.removeEventListener('scroll', this.loadMore);
+    }
+
+    loadMore(e) {
+        if(this.props.fetching) return;
+
+        if(document.body.scrollHeight - window.scrollY - window.innerHeight < 400)
+            this.props.loadMore();
     }
 
     render() {

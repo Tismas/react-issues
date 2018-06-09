@@ -32,7 +32,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader?data=@import './src/styles/variables.scss';"]
       },
       {
-        test: /\.png/,
+        test: /\.(eot|otf|svg|ttf|woff|woff2|png)$/,
         use: 'file-loader'
       }
     ]

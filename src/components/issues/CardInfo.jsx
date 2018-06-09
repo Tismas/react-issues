@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Octicon from 'react-octicon';
 
-import Avatar from './Avatar';
-import MoreArrow from './MoreArrow';
-import IssueBody from './IssueBody';
-
-import '../styles/issue-card-info.scss';
+import '../../styles/issue-card-info.scss';
 
 const propTypes = {
     issue: PropTypes.object.isRequired,
@@ -34,6 +31,8 @@ class CardInfo extends Component {
                     { issue.state } 
                 </div>
                 <div className="issue-title"> { issue.title }</div>
+                <Octicon name={issue.state == 'open' ? 'issue-opened' : 'issue-closed'} />
+                <a className="issue-link" href={issue['html_url']}> Issue link </a>
             </div>
         );
     }

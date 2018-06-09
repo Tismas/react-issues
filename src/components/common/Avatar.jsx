@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import '../styles/avatar.scss';
+import '../../styles/avatar.scss';
 
 const propTypes = {
     src: PropTypes.string.isRequired
@@ -10,6 +10,7 @@ const propTypes = {
 
 class Avatar extends Component {
     render() {
+        const { src } = this.props;
         return (
             <img className="avatar" src={this.props.src} />
         );

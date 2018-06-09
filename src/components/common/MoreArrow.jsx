@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import '../styles/more-arrow.scss';
+import '../../styles/more-arrow.scss';
 
 const propTypes = {
     show: PropTypes.func.isRequired,
@@ -12,19 +12,14 @@ const propTypes = {
 
 class MoreArrow extends Component {
     render() {
+        const { hide, show, isOpen } = this.props;
         return (
-            <div 
+            <div
                 className="arrow-container"
-                onClick={this.props.isOpen ? 
-                    this.props.hide
-                    : 
-                    this.props.show
-                }
+                onClick={isOpen ? hide : show}
             >
-                <div 
-                    className={`arrow ${this.props.isOpen ? 
-                        'arrow-up' :'arrow-down'
-                    }`} 
+                <div
+                    className={`arrow ${isOpen ? 'arrow-up' : 'arrow-down'}`}
                 />
             </div>
         );

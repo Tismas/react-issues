@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Avatar from './Avatar';
-import MoreArrow from './MoreArrow';
-import IssueBody from './IssueBody';
+import Avatar from '../common/Avatar';
+import MoreArrow from '../common/MoreArrow';
 import CardInfo from './CardInfo';
 
-import '../styles/issue-card.scss';
+import '../../styles/issue-card.scss';
 
 const propTypes = {
     issue: PropTypes.object.isRequired,

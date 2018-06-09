@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 import Header from './Header';
-import IssuesList from './IssuesList';
-import Loader from './Loader';
+import IssuesList from './issues/IssuesList';
+import Loader from './common/Loader';
 
 import '../styles/app.scss';
 
@@ -17,12 +17,14 @@ class App extends Component {
             page: 1
         }
 
+        this.since = new Date();
+        this.since.setDate(this.since.getDate() - 7);
+
         this.loadMore = this.loadMore.bind(this);
+    }
 
-        let weekAgo = new Date();
-        weekAgo.setDate(weekAgo.getDate() - 7);
-
-        this.since = weekAgo;
+    componentDidMount() {
+        this.loadMore();
     }
 
     parseResults(response) {
@@ -33,10 +35,6 @@ class App extends Component {
                 page: this.state.page + 1
             });
         }
-    }
-
-    componentDidMount() {
-        this.loadMore();
     }
 
     loadMore() {
