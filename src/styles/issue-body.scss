@@ -1,0 +1,14 @@
+@keyframes slide-animation {
+    from { height: 0; };
+    to { height: 100%; };
+}
+
+.issue-body-container {
+    width: 100%;
+    padding: 10px 40px;
+
+    animation: slide-animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}

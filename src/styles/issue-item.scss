@@ -1,7 +1,11 @@
-.issue-container {
+.issue-entry-container {
     padding: 10px;
     background: linear-gradient(#EFEFEF, #FFF);
 
     display: flex;
     align-items: center;
+}
+
+.issue-title {
+    width: calc(100% - 10px);
 }
